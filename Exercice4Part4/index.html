@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr" ng-app="voituresApp">
+<html lang="fr" dir="ltr" ng-app="carsApp">
 <head>
   <meta charset="utf-8" />
   <!-- Bootstrap & CSS-->
@@ -9,16 +9,16 @@
 </head>
 
 <body>
-  <div ng-controller="voituresCtrl">
+  <div ng-controller="carsCtrl">
   <table>
     <thead>
     <th>Marque</th>
     <th>Couleur</th>
   </thead>
   <tbody>
-    <tr ng-repeat="voiture in voitures | filter : {couleur:'!verte'}">
-      <td>{{voiture.marque}}</td>
-      <td>{{voiture.couleur}}</td>
+    <tr ng-repeat="car in cars | filter : {couleur:'!verte'}">
+      <td>{{car.marque}}</td>
+      <td>{{car.couleur}}</td>
     </tr>
 
   </tbody>

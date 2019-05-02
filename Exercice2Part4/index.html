@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr" ng-app="voituresApp">
+<html lang="fr" dir="ltr" ng-app="carsApp">
+
 <head>
   <meta charset="utf-8" />
   <!-- Bootstrap & CSS-->
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-  <title></title>
 </head>
 
 <body>
-  <div ng-controller="voituresCtrl">
-  <table>
-    <thead>
-    <th>Marque</th>
-    <th>Couleur</th>
-  </thead>
-  <tbody>
-    <tr ng-repeat="voiture in voitures">
-      <td>{{voiture.marque}}</td>
-      <td>{{voiture.couleur}}</td>
-    </tr>
+  <div ng-controller="carsCtrl">
+    <table>
+      <thead>
+        <th>Marque</th>
+        <th>Couleur</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="car in cars">
+          <td>{{car.marque}}</td>
+          <td>{{car.couleur}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  </tbody>
-
-  </table>
-</div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- JSmaiSON -->
   <script type="text/javascript" src="assets/scripts/main.js"></script>
 </body>
+
 </html>

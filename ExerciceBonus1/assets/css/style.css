@@ -1,0 +1,7 @@
+input.ng-invalid{
+  border:red 1px solid;
+}
+
+input.ng-valid.ng-not-empty{
+  border:green 1px solid;
+}

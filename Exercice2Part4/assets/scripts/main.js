@@ -1,11 +1,12 @@
-var app = angular.module('voituresApp', []);
+var app = angular.module('carsApp', []);
 
-app.controller('voituresCtrl', ['$scope','$http',function($scope, $http) {
-  $http({
-    method:'GET',
-    url:'voitures.json'
-  }).then(function successCallback(response){
-    $scope.voitures=response.data;
+app.controller('carsCtrl', ['$scope','$http',function($scope, $http) {
+  // $http({
+  //   method:'GET',
+  //   url:'voitures.json'
+// });
+  $http.get('voitures.json').then(function successCallback(response){
+    $scope.cars = response.data;
   }, function errorCallback(response){
     alert('error');
   });

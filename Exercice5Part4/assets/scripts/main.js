@@ -1,6 +1,6 @@
 var app = angular.module('hideShow', []);
 
-app.controller('hideShowCtrl',function($scope) {
+app.controller('hideShowCtrl',['$scope', function($scope) {
   $scope.hidden=false;
   $scope.hide=function(){
     $scope.hidden=true;
@@ -8,4 +8,4 @@ app.controller('hideShowCtrl',function($scope) {
   $scope.show=function(){
     $scope.hidden=false;
   };
-});
+}]);
