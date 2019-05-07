@@ -1,0 +1,31 @@
+#name.ng-invalid{
+  border:red 3px solid;
+}
+
+#name.ng-valid.ng-not-empty{
+  border:green 3px solid;
+}
+
+#mail.ng-invalid{
+  border:red 3px solid;
+}
+
+#mail.ng-valid.ng-not-empty{
+  border:green 3px solid;
+}
+
+#message.ng-invalid{
+  border:red 3px solid;
+}
+
+#message.ng-valid.ng-not-empty{
+  border:green 3px solid;
+}
+
+#topic.ng-invalid{
+  border:red 3px solid;
+}
+
+#topic.ng-valid.ng-not-empty{
+  border:green 3px solid;
+}

@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html>
+<html lang="fr" dir="ltr" ng-app="formApp">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
+  <title>Modèle de type Anousone</title>
+</head>
+
+<body>
+  <anousone style="color : red ;">Ceci est une balise Anousone !</anousone> -->
+  <div ng-controller="formCtrl">
+    <form name="myForm">
+      <label for="name">Nom : </label><input type="text" name="nameInput" id="name" ng-pattern="nameRegex" ng-model="name" placeholder="Damien" />
+      <label for="mail">Email : </label><input type="text" name="mailInput" id="mail" ng-pattern="mailRegex" ng-model="mail" placeholder="damien.colson@gmail.com" />
+      <label for="topic">Sujet : </label><input type="text" name="topicInput" id="topic" ng-pattern="topicRegex" ng-model="topic" placeholder="sujet" />
+      <label for="message">Message : </label><textarea name="messageInput" id="message" ng-pattern="messageRegex" ng-model="message" placeholder="votre message"></textarea>
+
+      <p ng-show="myForm.nameInput.$error.pattern || name.length==0">Votre nom ne correspond pas aux critères attendus. Seuls les lettres minuscules et majuscules ainsi que les prénoms composés sont autorisés</p>
+      <p ng-show="myForm.mailInput.$error.pattern || mail.length==0">Votre mail ne correspond pas aux critères attendus. Une adresse du type premierBloc123@quelquechose ou premierBloc123@quelquechose.truc est attendu !</p>
+      <p ng-show="myForm.topicInput.$error.pattern || topic.length==0">Votre sujet ne correspond pas aux critères attendus. Vérifiez qu'il n'est pas vide</p>
+      <p ng-show="myForm.messageInput.$error.pattern || message.length==0">Votre message ne correspond pas aux critères attendus.Vérifiez qu'il n'est pas vide</p>
+      <button
+        ng-disabled="(myForm.nameInput.$pristine || myForm.mailInput.$pristine || myForm.topicInput.$pristine || myForm.messageInput.$pristine) || (myForm.nameInput.$error.pattern || name.length==0)||(myForm.mailInput.$error.pattern || mail.length==0)||(myForm.topicInput.$error.pattern || topic.length==0)||(myForm.messageInput.$error.pattern || message.length==0)"
+        name="button" ng-click="addTopic()">Envoyer</button>
+    </form>
+    <ul>
+      <li ng-repeat="infos in formInfos"><a href="#!/formInfos/{{$index}}">{{infos.topic}}</a></li>
+    </ul>
+  </div>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script> -->
+  <!-- JSmaiSON -->
+  <!-- <script type="text/javascript" src="assets/scripts/main.js"></script>
+</body>
+
+</html> -->
